@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Repair Booking Sheet</title>
+	<!--Embed bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body onload='loadRepairBooking()'>
+	
+	<!--main-->
+	<body onload='loadRepairBooking()'>
+        <header class="row bg-secondary p-2">
+            <div class="col-12 col-lg-8 p-3">
+                <h2>Repair Booking</h2>
+            </div>
+            <div class="col-12 col-lg-4 text-center p-1">
+                <h5>Amount Due:</h5>
+                <h4>$<span id="amountDue"></span></h4>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="col-12 col-md-8 p-1">
+                        <h3>Customer</h3>
+                        <p><span id="title"></span> <span id="firstname"></span> <span id="lastname"></span></p>
+                        <p><span id="address"></span></p>
+                        <p><span id="addressSuburb"></span>, <span id="addressCity"></span> <span id="addressPostcode"></span></p>
+                        <p><span id="phoneNumber"></span></p>
+                        <p><span id="emailOutput"></span></p>
+                    </section>
+                    <section class="col-12 col-md-4 p-1">
+                        <h3>Repair Job</h3>
+                        <p><strong>Job Number: </strong><span id="jobNumber"></span></p>
+                        <p><strong>Invoice Date: </strong><span id="invoiceDate"></span> <span id="invoiceTime"></span></p>
+                        <p><strong>Payment Due: </strong><span id="paymentDue"></span></p>
+                    </section>
+                </div>
+            </div>
+
+            <hr style="border-top: 2px solid black; margin: 30px;">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="col-12 p-1">
+                        <h3>Repair Details</h3>
+                        <p><strong>Purchase Date: </strong><span id="purchaseDateOutput"></span></p>
+                        <p><strong>Repair Date/Time: </strong><span id="repairDateTimeOutput"></span> <span id="repairTime"></span></p>
+                        <p><strong>Under Warranty: </strong><span id="warrantyOutput"></span></p>
+                        <p><strong>IMEI Number: </strong><span id="imeiNumberOutput"></span></p>
+                        <p><strong>Device Make: </strong><span id="deviceMakeOutput"></span></p>
+                        <p><strong>Model Number: </strong><span id="modelNumberOutput"></span></p>
+                        <p><strong>Fault Category: </strong><span id="faultCategoryOutput"></span></p>
+                        <p><strong>Description: </strong><span id="faultDescriptionOutput"></span></p>
+                    </section>
+
+                    <section class="col-12">
+                        <h3>Courtesy Loan Device Details</h3>
+                        <table id="itemTable"></table>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col-8"></div>
+                    <section class="col-12 col-md-4 p-2">
+                        <h3>Totals</h3>
+                        <p><strong>Bond:</strong> $<span id="bondOutput"></span></p>
+                        <p><strong>Service Fee:</strong> $<span id="serviceFeeOutput"></span></p>
+                        <p><strong>Total:</strong> $<span id="subTotalOutput"></span></p>
+                        <p><strong>GST:</strong> $<span id="gstOutput"></span></p>
+                        <p><strong>Total (+GST):</strong> $<span id="totalOutput"></span></p>
+                    </section>
+                </div>
+            </div>
+
+            <hr>
+            <div class="container-fluid">
+                <div class="row">
+                    <section id="phoneFixServices" class="col-10">
+                        <h3>Phone Fix Services</h3>
+                        <p>335 St George's Road <br>
+                            Daniel van Wyk
+                        </p>
+                    </section>
+
+                    <section id="contactInfo" class="col-2 col-md-2 text-end">
+                        <h3>Contact Us</h3>
+                        <p><strong>Phone: </strong>0273044548</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+
+	<!--insert Bootstrap JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!--insert JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<!--insert our own js file-->
+	<script src="javascript.js"></script>
+	
+</body>
+</html>
